@@ -1,10 +1,10 @@
 {
   "name": "soundpart",
   "version": "0.0.1",
-  "description": "",
-  "author": "",
+  "description": "API REST para dividir ficheiros de áudio em várias partes iguais. Cada parte é exportada em MP3 e devolvida num ficheiro ZIP.",
+  "author": "Ismélio Dias Cristóvão Cori <ismeliocori@hotmail.com> (https://github.com/Cori-YS)",
   "private": true,
-  "license": "UNLICENSED",
+  "license": "MIT",
   "scripts": {
     "build": "nest build",
     "format": "prettier --write \"src/**/*.ts\" \"test/**/*.ts\"",
