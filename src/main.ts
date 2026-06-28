@@ -1,9 +1,21 @@
 import { NestFactory } from '@nestjs/core';
 import { AppModule } from './app.module';
 import { ValidationPipe } from '@nestjs/common';
+import { DocumentBuilder, SwaggerModule } from '@nestjs/swagger';
 
 async function bootstrap() {
   const app = await NestFactory.create(AppModule);
+
+  const config = new DocumentBuilder()
+    .setTitle('Soundpart')
+    .setDescription(
+      'The Soundpart API allows audio spliting and transcription to text.',
+    )
+    .setVersion('0.01')
+    .build();
+
+  const documentFactory = () => SwaggerModule.createDocument(app, config);
+  SwaggerModule.setup('api', app, documentFactory);
 
   app.useGlobalPipes(
     new ValidationPipe({

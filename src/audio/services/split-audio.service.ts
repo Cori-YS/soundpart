@@ -1,5 +1,5 @@
 import { Injectable, StreamableFile } from '@nestjs/common';
-import { SplitAudioDto } from '../dtos/split-audio-dto';
+import { SplitAudioDto } from '../dtos/split-audio.dto';
 import fs from 'fs/promises';
 import { randomUUID } from 'crypto';
 import { sanitizeFilename } from 'src/shared/utils/sanitize-filename';
